@@ -10,10 +10,11 @@ public struct quad {
     public Vector2[] uvs;
     public int[] lookup;
 
-    public quad (index Position, Vector3[] Vertices, Vector2[] UVs, int[] Lookup){
+    public quad (index Position, Vector3[] Vertices, Vector2[] UVs, int[] Lookup)
+    {
         position = Position;
         vertices = Vertices;
         uvs = UVs;
         lookup = Lookup;
-}
+    }
 }
