@@ -25,9 +25,9 @@ public class editorScreen : MonoBehaviour {
         math = new screenMath(width, height, screen);
 
         lowerLeft = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(0, 0)[0]]);
-        upperRight = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(width, height)[3]]);
-        lowerRight = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(width, 0)[1]]);
-        upperLeft = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(0, height)[2]]);
+        upperRight = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(width-1, height-1)[3]]);
+        lowerRight = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(width-1, 0)[1]]);
+        upperLeft = mainCamera.WorldToScreenPoint(screen.vertices[math.lookup(0, height-1)[2]]);
 
     }
 	

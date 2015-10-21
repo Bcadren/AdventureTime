@@ -20,10 +20,10 @@ public class screenMath {
     {
         int[] arrayPosition = new int[4];
 
-        arrayPosition[0] = ((position.x * height + position.y) * 4);
-        arrayPosition[1] = ((position.x * height + position.y) * 4 + 1);
-        arrayPosition[2] = ((position.x * height + position.y) * 4 + 2);
-        arrayPosition[3] = ((position.x * height + position.y) * 4 + 3);
+        arrayPosition[0] = ((position.y * width + position.x) * 4);
+        arrayPosition[1] = ((position.y * width + position.x) * 4 + 1);
+        arrayPosition[2] = ((position.y * width + position.x) * 4 + 2);
+        arrayPosition[3] = ((position.y * width + position.x) * 4 + 3);
 
         return arrayPosition;
     }

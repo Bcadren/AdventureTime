@@ -23,23 +23,23 @@ public class screenController : MonoBehaviour {
 
 			for (int y = 0; y < screenSize.y; y++) {
 
-				vertices[(x*screenSize.y+y)*4]   = new Vector3(x,y,0);
-				vertices[(x*screenSize.y+y)*4+1] = new Vector3(x+1,y,0);
-				vertices[(x*screenSize.y+y)*4+2] = new Vector3(x,y+1,0);
-				vertices[(x*screenSize.y+y)*4+3] = new Vector3(x+1,y+1,0);
+				vertices[(y*screenSize.x+x)*4]   = new Vector3(x,y,0);
+				vertices[(y*screenSize.x+x)*4+1] = new Vector3(x+1,y,0);
+				vertices[(y*screenSize.x+x)*4+2] = new Vector3(x,y+1,0);
+				vertices[(y*screenSize.x+x)*4+3] = new Vector3(x+1,y+1,0);
 
-				triangles[(x*screenSize.y+y)*6]   = (x*screenSize.y+y)*4;
-				triangles[(x*screenSize.y+y)*6+1] = (x*screenSize.y+y)*4+3;
-				triangles[(x*screenSize.y+y)*6+2] = (x*screenSize.y+y)*4+1;
+				triangles[(y*screenSize.x+x)*6]   = (x*screenSize.y+y)*4;
+				triangles[(y*screenSize.x+x)*6+1] = (x*screenSize.y+y)*4+3;
+				triangles[(y*screenSize.x+x)*6+2] = (x*screenSize.y+y)*4+1;
 
-				triangles[(x*screenSize.y+y)*6+3] = (x*screenSize.y+y)*4;
-				triangles[(x*screenSize.y+y)*6+4] = (x*screenSize.y+y)*4+2;
-				triangles[(x*screenSize.y+y)*6+5] = (x*screenSize.y+y)*4+3;
+				triangles[(y*screenSize.x+x)*6+3] = (x*screenSize.y+y)*4;
+				triangles[(y*screenSize.x+x)*6+4] = (x*screenSize.y+y)*4+2;
+				triangles[(y*screenSize.x+x)*6+5] = (x*screenSize.y+y)*4+3;
 
-				uv[(x*screenSize.y+y)*4]   = new Vector2 (0.5f,0f);
-				uv[(x*screenSize.y+y)*4+1] = new Vector2 (0.75f,0f);
-				uv[(x*screenSize.y+y)*4+2] = new Vector2 (0.5f,0.25f);
-				uv[(x*screenSize.y+y)*4+3] = new Vector2 (0.75f,0.25f);
+				uv[(y*screenSize.x+x)*4]   = new Vector2 (0.5f,0f);
+				uv[(y*screenSize.x+x)*4+1] = new Vector2 (0.75f,0f);
+				uv[(y*screenSize.x+x)*4+2] = new Vector2 (0.5f,0.25f);
+				uv[(y*screenSize.x+x)*4+3] = new Vector2 (0.75f,0.25f);
 
 			}
 		}
