@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
-public class screenController : MonoBehaviour {
+public class screenGenerator : MonoBehaviour {
 
 	public index screenSize = new index (16,15);
 	public string screenName = "screen";
