@@ -5,6 +5,7 @@ using System.Collections;
 public class screenController : MonoBehaviour {
 
 	public index screenSize = new index (16,15);
+	public string screenName = "screen";
 	
 	void Start () {
 
@@ -49,7 +50,7 @@ public class screenController : MonoBehaviour {
 
 		screen.RecalculateNormals();
 		gameObject.GetComponent<MeshFilter> ().mesh = screen;
-		AssetDatabase.CreateAsset (screen, "Assets/screen.asset");
+		AssetDatabase.CreateAsset (screen, "Assets/" + screenName + ".asset");
 
 	}
 
